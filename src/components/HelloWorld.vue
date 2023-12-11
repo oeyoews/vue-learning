@@ -4,6 +4,17 @@ import { reactive, computed, withDefaults, ref, onMounted } from 'vue'
 
 const env = import.meta.env
 
+const items = [
+  {
+    id: 1,
+    name: 'wxy'
+  },
+  {
+    id: 2,
+    name: 'wxy'
+  }
+]
+
 const name = reactive({
   first: 'wxy',
   last: 'wxy'
@@ -81,6 +92,14 @@ const changeId = () => {
 </script>
 
 <template>
+  <div>
+    <RouterLink to="/home">Home</RouterLink>
+  </div>
+
+  <div>
+    <RouterLink to="/about">About</RouterLink>
+  </div>
+  <hr>
   <h2>模板语法</h2>
   {{ url }}
   <div v-html="rawHTML"></div>
@@ -111,11 +130,23 @@ const changeId = () => {
   <h2>条件渲染</h2>
   <p v-if="seel">seen</p>
 
-  <h2>列表渲染​
-  </h2>
+  <h2>列表渲染​</h2>
+  <li>支持嵌套v-for</li>
+  <li>支持组件</li>
+  <ol>
+    <li v-for="item in items" :key="item.id">{{ item.id }} {{ item.name }}</li>
+  </ol>
+  <hr>
+  <ul>
+    <li v-for="({ id, name }, index) in items">index is {{ index }} {{ id }} {{ name }}</li>(对象解构)
+  </ul>
 
-  <h2>数据绑定</h2>
+  <h2>事件处理</h2>
+  <span>{{ count }}</span>
+  <button @click="count++">count inc</button>
   <button @click="increment">inc</button>
+
+  <h2>表单输入绑定</h2>
   <!-- v-model.lazy is focus changed -->
   <input type="text" v-model.trim="message">
   <input type="text" v-model.lazy="message">
