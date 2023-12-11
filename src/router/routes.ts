@@ -3,17 +3,14 @@ import Home from '~/pages/Home/index.vue';
 const routes = [
   // 首页
   {
-    path: '/home',
-    name: 'home',
-    meta: {
-      title: '主页',
-    },
+    path: '/',
+    name: 'Home',
     component: Home,
   },
   // 搜索
   {
-    path: '/about',
-    name: 'about',
+    path: '/search',
+    name: 'search',
     // lazy load
     component: () => import('~/pages/Search/index.vue'),
     meta: {

@@ -1,5 +1,7 @@
-<script setup></script>
+<script setup>
+import HelloWorld from '~/components/HelloWorld.vue'
+</script>
 
 <template>
-	<h2>Home</h2>
+	<HelloWorld msg="Hello Vue 3 + Vite + typescript + tailwind" />
 </template>

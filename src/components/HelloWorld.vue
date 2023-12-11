@@ -93,11 +93,11 @@ const changeId = () => {
 
 <template>
   <div>
-    <RouterLink to="/home">Home</RouterLink>
+    <RouterLink to="/">Home</RouterLink>
   </div>
 
   <div>
-    <RouterLink to="/about">About</RouterLink>
+    <RouterLink to="/search">search</RouterLink>
   </div>
   <hr>
   <h2>模板语法</h2>
