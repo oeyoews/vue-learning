@@ -1,7 +1,38 @@
 <script setup lang="ts">
 
-import {withDefaults, ref, onMounted } from 'vue'
+import { reactive, computed, withDefaults, ref, onMounted } from 'vue'
 
+const env = import.meta.env
+
+const name = reactive({
+  first: 'wxy',
+  last: 'wxy'
+})
+
+const test = {
+  id: ref(1)
+}
+
+const author = reactive({
+  name: 'wxy',
+  age: 18,
+  books: [
+    {
+      name: 'book1',
+      price: 100
+    },
+    {
+      name: 'book2',
+      price: 200
+    }
+  ]
+})
+
+const publisher = computed(() => {
+  return author.books.length > 0 ? author.name : 'none'
+})
+
+const age = ref(18)
 // NOTE: lint 不会报错,但是会在控制台warn 如果丢失必选参数
 interface Props {
   msg: string
@@ -16,11 +47,15 @@ const props = withDefaults(defineProps<Props>(), {
   foo: 'bar'
 })
 
+const seel = true
+const message = ref('hhh')
+
 const increment = () => {
   count.value++
 }
 
 const count = ref<number>(0)
+const url = 'https://github.com'
 
 onMounted(() => {
   console.log(count.value)
@@ -30,35 +65,38 @@ onMounted(() => {
 </script>
 
 <template>
-  <h1>{{ props.msg }} </h1>
+  <h2>样式绑定</h2>
+  <p class="font-bold underline">{{ props.msg }} </p>
+
+  <h2>响应式</h2>
+  {{ name.first + 1 }}
+  {{ name.last }}
+  {{ test.id }}
+  <!-- if use ts, also tip your error -->
+  <!-- {{ test.id + 1 }} -->
+
+  <h2>属性计算</h2>
+  <p>publisher {{ publisher }}</p>
+
+  <h2>环境变量</h2>
+  <p>VITE_API is {{ env.VITE_API }}</p>
+
+  <h2>条件渲染</h2>
+
+  <p v-if="seel">seen</p>
 
   <div :id="props.foo"></div>
+
+  <h2>数据绑定</h2>
   <button @click="increment">inc</button>
+  <!-- v-model.lazy is focus changed -->
+  <input type="text" v-model.trim="message">
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
+  <input type="text" v-model.number="age">
+  <p>
+    {{ age }}
+    {{ typeof age }}
+  </p>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  <a :href="url" target="_blank">url v-bind</a>
 </template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
