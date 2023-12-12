@@ -8,18 +8,25 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
+import VueJsx from '@vitejs/plugin-vue-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    VueJsx(),
     VueRouter({
       dts: 'src/typed-router.d.ts',
     }), // first
     Components({
+      extensions: ['vue', 'jsx', 'tsx'],
       dts: 'src/components.d.ts',
     }),
     AutoImport({
-      imports: ['vue', VueRouterAutoImports],
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue\??/, // .vue
+      ],
+      imports: ['vue', 'pinia', VueRouterAutoImports],
       dts: 'src/auto-imports.d.ts',
       eslintrc: {
         enabled: false,
