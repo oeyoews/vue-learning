@@ -22,3 +22,6 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 ## TODO
 
 - JSX plugin
+- Layout: https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+- vitesse
+- ssr
