@@ -1,8 +1,7 @@
 <script setup lang="ts">
 
-import { reactive, computed, withDefaults, ref, onMounted } from 'vue'
-
 const env = import.meta.env
+const counter = useCounterStore()
 
 const items = [
   {
@@ -97,7 +96,7 @@ const changeId = () => {
   </div>
 
   <div>
-    <RouterLink to="/search">search</RouterLink>
+    <RouterLink to="/test">search</RouterLink>
   </div>
   <hr>
   <h2>模板语法</h2>
@@ -156,4 +155,8 @@ const changeId = () => {
   <hr>
   <h2>环境变量(vite)</h2>
   <p>VITE_API is {{ env.VITE_API }}</p>
+
+  <hr>
+  <h2>test</h2>
+  {{ counter.count }}
 </template>
