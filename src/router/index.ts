@@ -1,10 +1,8 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-import routes from './routes';
+import { createRouter, createWebHistory } from 'vue-router/auto';
 
 // 基础配置
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
-  routes,
+  history: createWebHistory(import.meta.env.BASE_URL),
 });
 
 export default router;
