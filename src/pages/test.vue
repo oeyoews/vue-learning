@@ -1,8 +1,8 @@
-<!-- TODO autoimport not work even imported -->
+<!-- WIP -->
 <script setup>
-import { Avatar } from '~/components/Avatar';
+import MyComponent from '~/components/Avatar'
 </script>
 
 <template>
-	<Avatar />
+	<MyComponent name="John" />
 </template>

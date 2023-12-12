@@ -1,5 +1,10 @@
 <script setup lang="ts">
 
+// component props
+const props = withDefaults(defineProps<Props>(), {
+  msg: 'Vue Learning',
+})
+
 const env = import.meta.env
 const counter = useCounterStore()
 
@@ -47,11 +52,6 @@ const age = ref(18)
 interface Props {
   msg: string
 }
-
-// component props
-const props = withDefaults(defineProps<Props>(), {
-  msg: 'Vue Learning',
-})
 
 const seel = true
 const message = ref('hhh')
