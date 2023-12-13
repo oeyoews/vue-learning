@@ -20,7 +20,6 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       minify: 'terser',
-      ssr: true,
       terserOptions: {
         compress: {
           pure_funcs: ['console.log'],
