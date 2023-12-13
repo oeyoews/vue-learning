@@ -4,10 +4,11 @@ interface MyComponentProps {
 }
 
 const MyComponent = defineComponent<MyComponentProps>({
+  // @ts-ignore
   props: {
     name: String,
   },
-  setup(props) {
+  setup(props: any) {
     return () => <div>{props.name}</div>;
   },
 });
