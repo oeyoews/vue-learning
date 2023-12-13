@@ -97,14 +97,6 @@ const changeId = () => {
 </script>
 
 <template>
-  <div>
-    <RouterLink to="/">Home</RouterLink>
-  </div>
-
-  <div>
-    <RouterLink to="/test">search</RouterLink>
-  </div>
-  <hr>
   <h2>模板语法</h2>
   {{ url }}
   <div v-html="rawHTML"></div>
@@ -163,6 +155,6 @@ const changeId = () => {
   <p>VITE_API is {{ env.VITE_API }}</p>
 
   <hr>
-  <h2>test</h2>
-  {{ counter.count }}
+  <h2>Pinia state manager</h2>
+  counter: {{ counter.count }}
 </template>
