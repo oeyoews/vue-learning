@@ -12,8 +12,12 @@ import VueJsx from '@vitejs/plugin-vue-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  esbuild: {
+    drop: ['console', 'debugger'],
+  },
   build: {
     minify: 'terser',
+    ssr: true,
     terserOptions: {
       compress: {
         pure_funcs: ['console.log'],
