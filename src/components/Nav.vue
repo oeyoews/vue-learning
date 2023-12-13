@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const links = [
+
+interface Props {
+	links?: Link[]
+}
+
+const links = ([
 	{
 		name: 'Home',
 		path: '/'
@@ -8,10 +13,20 @@ const links = [
 		name: 'blog',
 		path: '/blog'
 	}
-]
+])
+
+const props = withDefaults(defineProps<Props>(), {
+	links() {
+		return links
+	}
+})
+
 </script>
 <template>
 	<div class="flex space-x-2 justify-end items-center">
-		<RouterLink v-for="link in links" :to="link.path">{{ link.name }}</RouterLink>
+		<RouterLink class="no-underline hover:underline" v-for="link in props.links" :to="link.path" :key="link.path">{{
+			link.name ||
+			link.path }}
+		</RouterLink>
 	</div>
 </template>

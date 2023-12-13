@@ -14,7 +14,9 @@ const routerInfo = {
 
 <template>
 	<h2>{{ title }}</h2>
-	<li v-for="(value, key) in routerInfo">
-		{{ key }}: {{ value }}
-	</li>
+	<ul>
+		<li v-for="(value, key) in routerInfo">
+			{{ key }}: {{ value }}
+		</li>
+	</ul>
 </template>

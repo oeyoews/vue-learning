@@ -128,8 +128,12 @@ const changeId = () => {
   <p v-if="seel">seen</p>
 
   <h2>列表渲染​</h2>
-  <li>支持嵌套v-for</li>
-  <li>支持组件</li>
+
+  <ul>
+    <li>支持嵌套v-for</li>
+    <li>支持组件</li>
+  </ul>
+
   <ol>
     <li v-for="item in items" :key="item.id">{{ item.id }} {{ item.name }}</li>
   </ol>
