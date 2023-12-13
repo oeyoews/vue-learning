@@ -5,4 +5,5 @@ const route = useRoute('/blog/[id]')
 
 <template>
 	{{ route.params.id }}
+	{{ route.query.id }}
 </template>
