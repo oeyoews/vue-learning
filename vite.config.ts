@@ -18,15 +18,6 @@ export default defineConfig(({ mode }) => {
       pure: mode === 'production' ? ['console.log'] : [],
       // pure: ['console.log'],
     },
-    build: {
-      minify: 'terser',
-      terserOptions: {
-        compress: {
-          pure_funcs: ['console.log'],
-        },
-      },
-      sourcemap: false,
-    },
     plugins: [
       VueJsx(),
       VueRouter({
