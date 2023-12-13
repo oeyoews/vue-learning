@@ -97,15 +97,8 @@ const changeId = () => {
 </script>
 
 <template>
-  <h2>模板语法</h2>
-  {{ url }}
-  <div v-html="rawHTML"></div>
-  <div :id="dynamicId">{{ dynamicId }}</div>
-  <button @click="changeId">change id</button>
-
   <h2>组件传参</h2>
   <p class="font-bold capitalize">{{ props.messages }} </p>
-
 
   <h2>响应式基础</h2>
   {{ name.first + 1 }}

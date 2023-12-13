@@ -1,4 +1,4 @@
-const links = [
+const links: Link[] = [
   {
     name: 'Home',
     path: '/',
@@ -9,8 +9,16 @@ const links = [
   },
 ];
 
+const learningRoutes = [
+  { path: 'ComponentBasics' },
+  { path: 'VueRouterComponent' },
+  { path: 'TemplateSyntax' },
+];
+
 const config = {
   links,
+  learningRoutes,
+  learningRoutesPrefix: '/learning',
 };
 
 export default config;

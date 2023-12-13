@@ -5,7 +5,7 @@ export default {
   darkMode: 'media',
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   corePlugins: {
-    preflight: false,
+    // preflight: false,
   },
   theme: {
     extend: {},

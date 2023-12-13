@@ -1,7 +1,10 @@
 <script setup lang="ts">
+const header: LearningHeader = {
+	title: 'Vue Router Component(路由组件)',
+	link: 'https://router.vuejs.org/zh/guide'
+}
 const route = useRoute('/blog/[id]')
 
-const title = 'vue router with autonaming(filebase route)'
 const routerInfo = {
 	name: route.name,
 	fullPath: route.fullPath,
@@ -13,10 +16,10 @@ const routerInfo = {
 </script>
 
 <template>
-	<h2>{{ title }}</h2>
-	<ul>
+	<Title :title="header.title" :link="header.link" />
+	<ol>
 		<li v-for="(value, key) in routerInfo">
 			{{ key }}: {{ value }}
 		</li>
-	</ul>
+	</ol>
 </template>
