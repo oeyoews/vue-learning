@@ -9,7 +9,7 @@ const links: Link[] = [
   },
 ];
 
-const learningRoutes = [
+const learningRoutes: Link[] = [
   { path: 'ComponentBasics' },
   { path: 'VueRouterComponent' },
   { path: 'TemplateSyntax' },

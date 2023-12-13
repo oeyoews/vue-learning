@@ -2,9 +2,10 @@ import { defineConfig } from 'vite';
 import VueRouter from 'unplugin-vue-router/vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import { VueRouterAutoImports } from 'unplugin-vue-router';
+import Layouts from 'vite-plugin-vue-layouts';
 
 import Components from 'unplugin-vue-components/vite';
-import vue from '@vitejs/plugin-vue';
+import Vue from '@vitejs/plugin-vue';
 import path from 'path';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
@@ -32,7 +33,15 @@ export default defineConfig(({ mode }) => {
           /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
           /\.vue\??/, // .vue
         ],
-        imports: ['vue', 'pinia', VueRouterAutoImports],
+        imports: [
+          'vue',
+          'pinia',
+          VueRouterAutoImports,
+          {
+            'vue-router': ['RouterLink', 'RouterView'],
+            'vue-router/auto': ['useLink'],
+          },
+        ],
         dts: 'src/auto-imports.d.ts',
         eslintrc: {
           enabled: false,
@@ -40,7 +49,12 @@ export default defineConfig(({ mode }) => {
         dirs: ['src/composables', 'src/stores'],
         vueTemplate: true,
       }),
-      vue(),
+      Vue(),
+      Layouts({
+        layoutsDirs: 'src/layouts',
+        pagesDirs: 'src/pages',
+        defaultLayout: 'default',
+      }),
     ],
     server: {
       port: 3000,

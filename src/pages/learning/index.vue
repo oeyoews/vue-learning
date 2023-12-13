@@ -1,6 +1,5 @@
 <template>
-	blog homepage
-	<RouterLink to="/">go home</RouterLink>
+	Coming
 </template>
 
 <route lang="yaml">

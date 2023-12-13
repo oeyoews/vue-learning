@@ -21,5 +21,5 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 
 ## TODO
 
-- [ ] Layout: 路由共享 layout https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+- [ ] layout 不支持 hmr
 - [ ] autoformat with prettier

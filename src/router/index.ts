@@ -1,8 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router/auto';
+import { setupLayouts } from 'virtual:generated-layouts';
 
-// 基础配置
+import { routes } from 'vue-router/auto/routes';
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  extendRoutes: () => setupLayouts(routes),
 });
 
 export default router;

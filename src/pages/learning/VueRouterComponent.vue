@@ -17,6 +17,8 @@ const routerInfo = {
 
 <template>
 	<Title :title="header.title" :link="header.link" />
+
+	<b>NOTE: vue-router 自动忽略大小写</b>
 	<ol>
 		<li v-for="(value, key) in routerInfo">
 			{{ key }}: {{ value }}

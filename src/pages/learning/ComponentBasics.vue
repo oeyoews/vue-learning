@@ -30,3 +30,8 @@ const changeFontSize = () => {
 
 	<h3>dynamic component(动态组件)</h3>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: default
+</route>
