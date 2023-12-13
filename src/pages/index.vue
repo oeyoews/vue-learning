@@ -1,3 +1,3 @@
 <template>
-	<HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+	<HelloWorld message="Hello Vue 3 + TypeScript + Vite" />
 </template>

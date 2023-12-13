@@ -1,8 +1,14 @@
 <script setup lang="ts">
 
-// component props
+interface Props {
+  message: string
+  foo?: string
+}
+
+// component props, default vaulue
 const props = withDefaults(defineProps<Props>(), {
-  msg: 'Vue Learning',
+  messages: 'Vue Learning',
+  foo: 'hi'
 })
 
 const env = import.meta.env
@@ -50,7 +56,7 @@ const publisher = computed(() => {
 const age = ref(18)
 // NOTE: lint 不会报错,但是会在控制台warn 如果丢失必选参数
 interface Props {
-  msg: string
+  message: string
 }
 
 const seel = true
@@ -106,7 +112,7 @@ const changeId = () => {
   <button @click="changeId">change id</button>
 
   <h2>组件传参</h2>
-  <p class="font-bold capitalize">{{ props.msg }} </p>
+  <p class="font-bold capitalize">{{ props.messages }} </p>
 
 
   <h2>响应式基础</h2>

@@ -1,10 +1,8 @@
 <script setup>
-
-import { getRoute } from '~/lib/getRoute'
-const { id } = getRoute()
+const route = useRoute('/blog/[id]')
 
 </script>
 
 <template>
-	{{ id }}
+	{{ route.params.id }}
 </template>
