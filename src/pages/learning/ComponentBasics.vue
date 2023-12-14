@@ -1,8 +1,4 @@
 <script setup lang="ts">
-const header: LearningHeader = {
-  title: '组件基础',
-  link: 'https://cn.vuejs.org/guide/essentials/component-basics.html',
-};
 const isToggle = ref(true);
 const toggleComponent = () => {
   isToggle.value = !isToggle.value;
@@ -21,8 +17,6 @@ const changeFontSize = () => {
 </script>
 
 <template>
-  <Title :link="header.link" :title="header.title" />
-
   <h3>监听事件</h3>
   <button @click="changeFontSize">enlarge text</button>
   <button v-if="fontSize !== 1" @click="fontSize = 1">reset fontsize</button>
@@ -38,3 +32,9 @@ const changeFontSize = () => {
   <button @click="toggleComponent">toggle component</button>
   <component :is="isToggle ? Lorem : Lorem2" />
 </template>
+
+<route lang="yaml">
+meta:
+  title: '组件基础'
+  link: 'https://cn.vuejs.org/guide/essentials/component-basics.html'
+</route>

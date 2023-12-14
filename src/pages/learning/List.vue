@@ -1,9 +1,4 @@
 <script setup lang="ts">
-const header: LearningHeader = {
-  title: 'List',
-  link: 'https://cn.vuejs.org/guide/essentials/list.html',
-};
-
 const items = [
   {
     id: 1,
@@ -17,10 +12,6 @@ const items = [
 </script>
 
 <template>
-  <Title :title="header.title" :link="header.link" />
-
-  <h2>列表渲染​</h2>
-
   <ul>
     <li>支持嵌套v-for</li>
     <li>支持组件</li>
@@ -37,3 +28,9 @@ const items = [
     (对象解构)
   </ul>
 </template>
+
+<route lang="yaml">
+meta:
+  title: '列表渲染'
+  link: 'https://cn.vuejs.org/guide/essentials/list.html'
+</route>

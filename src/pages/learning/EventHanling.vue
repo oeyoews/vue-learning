@@ -1,8 +1,4 @@
 <script setup lang="ts">
-const header: LearningHeader = {
-  title: '事件处理',
-  link: 'https://cn.vuejs.org/guide/essentials/event-handling.html',
-};
 const count = ref(0);
 const increment = () => {
   count.value++;
@@ -10,8 +6,6 @@ const increment = () => {
 </script>
 
 <template>
-  <Title :title="header.title" :link="header.link" />
-
   <span>{{ count }}</span>
 
   <h3>事件修饰符</h3>
@@ -22,3 +16,9 @@ const increment = () => {
   <button @click="count++">count inc</button>
   <button @click="increment">inc</button>
 </template>
+
+<route lang="yaml">
+meta:
+  title: '事件处理'
+  link: 'https://cn.vuejs.org/guide/essentials/event-handling.html'
+</route>

@@ -55,7 +55,7 @@ export default defineConfig(({ mode }) => {
       Vue(),
       ClientSideLayout({
         layoutDir: 'src/layouts', // default to 'src/layouts'
-        defaultLayout: 'default', // default to 'default', no need '.vue'
+        defaultLayout: 'learning', // default to 'default', no need '.vue'
         importMode: 'sync', // The default will automatically detect -> ssg is sync，other is async
       }),
     ],

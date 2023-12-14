@@ -13,5 +13,5 @@ useHead({
 
 <route lang="yaml">
 meta:
-  layout: learning
+  layout: default
 </route>
