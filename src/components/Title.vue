@@ -13,10 +13,13 @@ useHead({
 </script>
 
 <template>
-  <a :href="link" target="_blank" rel="noopener noreferrer">
+  <a
+    :href="link"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="跳转到相关文档">
     <h2 class="text-center">
       {{ title }}
-      <slot />
     </h2>
   </a>
 </template>

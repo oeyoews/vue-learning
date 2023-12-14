@@ -53,6 +53,7 @@ declare module 'vue-router/auto/routes' {
     '/learning/Reactivity': RouteRecordInfo<'/learning/Reactivity', '/learning/Reactivity', Record<never, never>, Record<never, never>>,
     '/learning/TemplateSyntax': RouteRecordInfo<'/learning/TemplateSyntax', '/learning/TemplateSyntax', Record<never, never>, Record<never, never>>,
     '/learning/VueRouterComponent': RouteRecordInfo<'/learning/VueRouterComponent', '/learning/VueRouterComponent', Record<never, never>, Record<never, never>>,
+    '/learning/watchers': RouteRecordInfo<'/learning/watchers', '/learning/watchers', Record<never, never>, Record<never, never>>,
   }
 }
 
