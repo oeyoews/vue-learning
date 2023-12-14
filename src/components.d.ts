@@ -8,15 +8,15 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Avatar: typeof import('./components/Avatar.tsx')['default']
-    ComponentBasics: typeof import('./components/Learning/ComponentBasics.vue')['default']
+    ComponentBasics: (typeof import("./components/Learning/ComponentBasics.vue"))["default"]
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     LinkList: typeof import('./components/LinkList.vue')['default']
     Lorem: typeof import('./components/Lorem.vue')['default']
     Nav: typeof import('./components/Nav.vue')['default']
-    RouteComponent: typeof import('./components/RouteComponent.vue')['default']
+    RouteComponent: (typeof import("./components/RouteComponent.vue"))["default"]
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Title: typeof import('./components/Title.vue')['default']
-    VueRouterComponent: typeof import('./components/VueRouterComponent.vue')['default']
+    VueRouterComponent: (typeof import("./components/VueRouterComponent.vue"))["default"]
   }
 }

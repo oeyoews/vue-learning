@@ -1,5 +1,5 @@
 <template>
-	<div class="container max-w-4xl mx-auto my-4 prose prose-indigo antialiased">
-		<RouterView />
-	</div>
+  <div class="container max-w-4xl mx-auto my-4 prose prose-indigo antialiased">
+    <RouterView />
+  </div>
 </template>

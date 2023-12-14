@@ -1,6 +1,4 @@
-<template>
-	Coming
-</template>
+<template>Coming</template>
 
 <route lang="yaml">
 meta:

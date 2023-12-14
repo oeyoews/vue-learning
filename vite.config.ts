@@ -2,7 +2,8 @@ import { defineConfig } from 'vite';
 import VueRouter from 'unplugin-vue-router/vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import { VueRouterAutoImports } from 'unplugin-vue-router';
-import Layouts from 'vite-plugin-vue-layouts';
+// import Layouts from 'vite-plugin-vue-layouts';
+import { ClientSideLayout } from 'vite-plugin-vue-layouts';
 
 import Components from 'unplugin-vue-components/vite';
 import Vue from '@vitejs/plugin-vue';
@@ -23,6 +24,7 @@ export default defineConfig(({ mode }) => {
       VueJsx(),
       VueRouter({
         dts: 'src/typed-router.d.ts',
+        // importMode: 'sync',
       }), // first
       Components({
         extensions: ['vue', 'jsx', 'tsx'],
@@ -50,10 +52,10 @@ export default defineConfig(({ mode }) => {
         vueTemplate: true,
       }),
       Vue(),
-      Layouts({
-        layoutsDirs: 'src/layouts',
-        pagesDirs: 'src/pages',
-        defaultLayout: 'default',
+      ClientSideLayout({
+        layoutDir: 'src/layouts', // default to 'src/layouts'
+        defaultLayout: 'default', // default to 'default', no need '.vue'
+        importMode: 'sync', // The default will automatically detect -> ssg is sync，other is async
       }),
     ],
     server: {
