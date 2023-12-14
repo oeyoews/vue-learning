@@ -4,6 +4,7 @@ const links: Link[] = [
     path: '/',
   },
   {
+    disable: true,
     name: 'blog',
     path: '/blog',
   },
