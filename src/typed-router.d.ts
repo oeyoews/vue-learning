@@ -42,9 +42,13 @@ declare module 'vue-router/auto/routes' {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/learning/': RouteRecordInfo<'/learning/', '/learning', Record<never, never>, Record<never, never>>,
     '/learning/ComponentBasics': RouteRecordInfo<'/learning/ComponentBasics', '/learning/ComponentBasics', Record<never, never>, Record<never, never>>,
+    '/learning/conditional': RouteRecordInfo<'/learning/conditional', '/learning/conditional', Record<never, never>, Record<never, never>>,
     '/learning/Env': RouteRecordInfo<'/learning/Env', '/learning/Env', Record<never, never>, Record<never, never>>,
+    '/learning/EventHanling': RouteRecordInfo<'/learning/EventHanling', '/learning/EventHanling', Record<never, never>, Record<never, never>>,
     '/learning/Forms': RouteRecordInfo<'/learning/Forms', '/learning/Forms', Record<never, never>, Record<never, never>>,
+    '/learning/List': RouteRecordInfo<'/learning/List', '/learning/List', Record<never, never>, Record<never, never>>,
     '/learning/Pinia': RouteRecordInfo<'/learning/Pinia', '/learning/Pinia', Record<never, never>, Record<never, never>>,
+    '/learning/Reactivity': RouteRecordInfo<'/learning/Reactivity', '/learning/Reactivity', Record<never, never>, Record<never, never>>,
     '/learning/TemplateSyntax': RouteRecordInfo<'/learning/TemplateSyntax', '/learning/TemplateSyntax', Record<never, never>, Record<never, never>>,
     '/learning/VueRouterComponent': RouteRecordInfo<'/learning/VueRouterComponent', '/learning/VueRouterComponent', Record<never, never>, Record<never, never>>,
   }

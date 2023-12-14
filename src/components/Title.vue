@@ -13,10 +13,10 @@ useHead({
 </script>
 
 <template>
-  <h2>
-    <a :href="link" target="_blank" rel="noopener noreferrer">
+  <a :href="link" target="_blank" rel="noopener noreferrer">
+    <h2 class="text-center">
       {{ title }}
       <slot />
-    </a>
-  </h2>
+    </h2>
+  </a>
 </template>
