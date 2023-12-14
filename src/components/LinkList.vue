@@ -22,7 +22,7 @@ const childrenPaths = paths[0].children?.[0].children?.filter(
         class="no-underline hover:underline capitalize"
         :to="path.name as string"
         :key="path.path"
-        >{{ path.path || path.name }}
+        >{{ path.meta?.title }}
       </RouterLink>
     </li>
   </ol>

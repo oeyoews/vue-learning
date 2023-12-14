@@ -11,7 +11,9 @@ const toggleActive = () => {
 </script>
 
 <template>
-  <div class="bg-red-500" :class="{ 'font-bold': active }">css</div>
+  <div class="bg-gray-500 p-2 rounded" :class="{ 'font-bold': active }">
+    css
+  </div>
   <div :class="classObject">object class</div>
   <button @click="toggleActive">toggle active</button>
 </template>
