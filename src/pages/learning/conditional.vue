@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import img from '~/assets/learning/conditional.png';
 const seel = ref(true);
 
 const toggleSeel = () => {
@@ -8,8 +9,11 @@ const toggleSeel = () => {
 
 <template>
   <h2>条件渲染</h2>
-  <p v-if="seel">seen</p>
-  <p v-if="!seel">unseen</p>
+  <p v-if="seel" class="font-bold">可见</p>
+  <del v-else>可见</del>
+
+  <img :src="img" class="rounded w-96" />
+  <p>v-if, v-else, v-if-else</p>
 
   <button @click="toggleSeel">toggle</button>
 </template>
