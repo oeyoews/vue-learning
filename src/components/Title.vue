@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import config from '~/config';
+
 const { title, link } = defineProps({
   title: String,
   link: String,
@@ -6,6 +8,7 @@ const { title, link } = defineProps({
 
 useHead({
   title,
+  titleTemplate: `%s - ${config.title}`,
 });
 </script>
 

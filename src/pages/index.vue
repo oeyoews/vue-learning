@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import config from '~/config';
+useHead({
+  title: config.title,
+});
+</script>
+
 <template>
   <Nav />
   <LinkList />

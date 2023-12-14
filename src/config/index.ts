@@ -17,6 +17,7 @@ const links: Link[] = [
 
 const config = {
   links,
+  title: 'Vue Learning',
   // learningRoutes,
   // learningRoutesPrefix: "/learning",
 };
