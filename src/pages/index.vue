@@ -6,7 +6,6 @@ useHead({
 </script>
 
 <template>
-  <Nav />
   <h1 class="text-center">{{ config.title }}</h1>
   <LinkList />
 </template>
