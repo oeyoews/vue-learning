@@ -1,16 +1,15 @@
 <script setup lang="ts">
 const header: LearningHeader = {
-  title: "Vue Router Component(路由组件)",
-  link: "https://router.vuejs.org/zh/guide",
+  title: 'Vue Router Component(路由组件)',
+  link: 'https://router.vuejs.org/zh/guide',
 };
-const route = useRoute("/blog/[id]");
+const route = useRoute('/learning/');
 
 const routerInfo = {
   name: route.name,
   fullPath: route.fullPath,
   params: route.params,
   query: route.query,
-  id: route.params.id,
 };
 </script>
 

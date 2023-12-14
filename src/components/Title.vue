@@ -1,7 +1,11 @@
 <script setup lang="ts">
-defineProps({
+const { title, link } = defineProps({
   title: String,
   link: String,
+});
+
+useHead({
+  title,
 });
 </script>
 
