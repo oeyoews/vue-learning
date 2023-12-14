@@ -43,6 +43,7 @@ declare module 'vue-router/auto/routes' {
     '/learning/': RouteRecordInfo<'/learning/', '/learning', Record<never, never>, Record<never, never>>,
     '/learning/ClassAndStyle': RouteRecordInfo<'/learning/ClassAndStyle', '/learning/ClassAndStyle', Record<never, never>, Record<never, never>>,
     '/learning/ComponentBasics': RouteRecordInfo<'/learning/ComponentBasics', '/learning/ComponentBasics', Record<never, never>, Record<never, never>>,
+    '/learning/Computes': RouteRecordInfo<'/learning/Computes', '/learning/Computes', Record<never, never>, Record<never, never>>,
     '/learning/conditional': RouteRecordInfo<'/learning/conditional', '/learning/conditional', Record<never, never>, Record<never, never>>,
     '/learning/Env': RouteRecordInfo<'/learning/Env', '/learning/Env', Record<never, never>, Record<never, never>>,
     '/learning/EventHanling': RouteRecordInfo<'/learning/EventHanling', '/learning/EventHanling', Record<never, never>, Record<never, never>>,
