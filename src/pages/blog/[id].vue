@@ -1,3 +1,0 @@
-<template>
-  <VueRouterComponent />
-</template>
