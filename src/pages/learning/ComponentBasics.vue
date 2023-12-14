@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const header: LearningHeader = {
-  title: "组件基础",
-  link: "https://cn.vuejs.org/guide/essentials/component-basics.html",
+  title: '组件基础',
+  link: 'https://cn.vuejs.org/guide/essentials/component-basics.html',
 };
 
 const fontSize = ref(1);
@@ -30,8 +30,3 @@ const changeFontSize = () => {
 
   <h3>dynamic component(动态组件)</h3>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: default
-</route>

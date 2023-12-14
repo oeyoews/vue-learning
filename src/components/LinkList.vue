@@ -1,27 +1,24 @@
 <script setup lang="ts">
 // <!-- NOTE: - [ ] vue-router 实时生成的 route 和 layout 导致页面加载错误, 需要client -->
-const { routes } = await import('vue-router/auto/routes');
-const learningroutes = await routes.filter((route) =>
-  route.path.startsWith('/learning')
+const router = useRouter();
+
+const routes = router.options.routes;
+
+// NOTE: 不要加 route layout on page
+const paths = routes.filter((route) => route.path.startsWith('/learning'));
+
+const childrenPaths = paths[0].children?.[0].children?.filter(
+  (item) => item.path
 );
 
-const { paths } = reactive({
-  paths: learningroutes[0].children,
-});
-
-paths?.forEach((path) => {
-  console.log(path);
-});
-
 // import config from '~/config';
-// const paths = config.learningRoutes
+// const paths = config.learningRoutes;
 </script>
 
 <template>
   <h2>Learning</h2>
-  {{ JSON.stringify(paths) }}
   <ol>
-    <li v-for="path in paths">
+    <li v-for="path in childrenPaths">
       <RouterLink
         class="no-underline hover:underline capitalize"
         :to="path.name as string"
