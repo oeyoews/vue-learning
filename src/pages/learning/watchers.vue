@@ -10,5 +10,5 @@
 <route lang="yaml">
 meta:
   title: '侦听器(watchers)'
-  links: 'https://cn.vuejs.org/guide/essentials/watchers.html'
+  link: 'https://cn.vuejs.org/guide/essentials/watchers.html'
 </route>
