@@ -25,7 +25,7 @@ const changeFontSize = () => {
 
   <h3>监听事件</h3>
   <button @click="changeFontSize">enlarge text</button>
-  <button @click="fontSize = 1">reset fontsize</button>
+  <button v-if="fontSize !== 1" @click="fontSize = 1">reset fontsize</button>
   <hr />
   <p :style="{ fontSize: fontSize + 'em' }">
     <Lorem />
