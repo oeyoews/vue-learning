@@ -16,7 +16,6 @@ const childrenPaths = paths[0].children?.[0].children?.filter(
 </script>
 
 <template>
-  <h2>Learning</h2>
   <ol>
     <li v-for="path in childrenPaths">
       <RouterLink

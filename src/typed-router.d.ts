@@ -41,6 +41,7 @@ declare module 'vue-router/auto/routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/learning/': RouteRecordInfo<'/learning/', '/learning', Record<never, never>, Record<never, never>>,
+    '/learning/ClassAndStyle': RouteRecordInfo<'/learning/ClassAndStyle', '/learning/ClassAndStyle', Record<never, never>, Record<never, never>>,
     '/learning/ComponentBasics': RouteRecordInfo<'/learning/ComponentBasics', '/learning/ComponentBasics', Record<never, never>, Record<never, never>>,
     '/learning/conditional': RouteRecordInfo<'/learning/conditional', '/learning/conditional', Record<never, never>, Record<never, never>>,
     '/learning/Env': RouteRecordInfo<'/learning/Env', '/learning/Env', Record<never, never>, Record<never, never>>,
