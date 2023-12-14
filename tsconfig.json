@@ -3,6 +3,7 @@
     "types": [
       "vite-plugin-vue-layouts/client"
     ],
+    "declarationMap": true,
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
