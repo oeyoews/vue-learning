@@ -44,6 +44,9 @@ declare module 'vue-router/auto/routes' {
     '/blog/[id]': RouteRecordInfo<'/blog/[id]', '/blog/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
     '/learning/': RouteRecordInfo<'/learning/', '/learning', Record<never, never>, Record<never, never>>,
     '/learning/ComponentBasics': RouteRecordInfo<'/learning/ComponentBasics', '/learning/ComponentBasics', Record<never, never>, Record<never, never>>,
+    '/learning/Env': RouteRecordInfo<'/learning/Env', '/learning/Env', Record<never, never>, Record<never, never>>,
+    '/learning/Forms': RouteRecordInfo<'/learning/Forms', '/learning/Forms', Record<never, never>, Record<never, never>>,
+    '/learning/Pinia': RouteRecordInfo<'/learning/Pinia', '/learning/Pinia', Record<never, never>, Record<never, never>>,
     '/learning/TemplateSyntax': RouteRecordInfo<'/learning/TemplateSyntax', '/learning/TemplateSyntax', Record<never, never>, Record<never, never>>,
     '/learning/VueRouterComponent': RouteRecordInfo<'/learning/VueRouterComponent', '/learning/VueRouterComponent', Record<never, never>, Record<never, never>>,
   }
