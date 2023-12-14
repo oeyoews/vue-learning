@@ -19,6 +19,7 @@ const links: Link[] = [
 const config = {
   links,
   title: 'Vue Learning',
+  defaultLink: 'https://cn.vuejs.org',
   // learningRoutes,
   // learningRoutesPrefix: "/learning",
 };

@@ -1,6 +1,4 @@
-<script setup lang="ts">
-console.log('watchers');
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <p>
