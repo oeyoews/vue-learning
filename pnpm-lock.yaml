@@ -61,15 +61,6 @@ dependencies:
     version: 4.2.5(vue@3.3.11)
 
 devDependencies:
-  '@iconify-json/carbon':
-    specifier: ^1.1.26
-    version: 1.1.26
-  '@iconify-json/ic':
-    specifier: ^1.1.17
-    version: 1.1.17
-  '@iconify-json/simple-icons':
-    specifier: ^1.1.84
-    version: 1.1.84
   '@iconify-json/skill-icons':
     specifier: ^1.1.6
     version: 1.1.6
@@ -593,24 +584,6 @@ packages:
     os: [win32]
     requiresBuild: true
     optional: true
-
-  /@iconify-json/carbon@1.1.26:
-    resolution: {integrity: sha512-0y6JstqPCsjEiUuyTTdHE7Wd9gGlxzH2dEfvKUJe5E741qRgLlIipVdBoCkOtbyAT92WEcU8BNfDaC585OCC8w==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: true
-
-  /@iconify-json/ic@1.1.17:
-    resolution: {integrity: sha512-EvAjZzVESmN36zlyefylePUNaU2BQ3eRKVZ6KQSQ2bG01ppoZaiFZRri74VTyvp5Mlv2yn68ux1fgCoT+etGmA==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: true
-
-  /@iconify-json/simple-icons@1.1.84:
-    resolution: {integrity: sha512-Mg7XHuRaXgZKlr+bz+vjuwy4atREUuHxwkQWymNnmL8cP1g0LI5Euh0bEYIcfmgMi8UiJQ+ALVM7ZSoAEP2uHQ==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: true
 
   /@iconify-json/skill-icons@1.1.6:
     resolution: {integrity: sha512-LRLlUYSveMLK5zRh0tfYyr4TBNqsQMGeZLEo1GO8AIQNEe2QmlfGID8NrghVCh8zvF6Mmkx/Iloy1ZFsO9W74w==}

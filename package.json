@@ -31,9 +31,6 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.1.26",
-    "@iconify-json/ic": "^1.1.17",
-    "@iconify-json/simple-icons": "^1.1.84",
     "@iconify-json/skill-icons": "^1.1.6",
     "@vitejs/plugin-vue": "^4.5.0",
     "typescript": "^5.2.2",
