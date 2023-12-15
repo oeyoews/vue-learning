@@ -10,3 +10,7 @@
     @apply !no-underline hover:!underline capitalize;
   }
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

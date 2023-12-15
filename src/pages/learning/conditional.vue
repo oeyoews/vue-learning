@@ -9,7 +9,6 @@ const toggleSeel = () => {
 </script>
 
 <template>
-  <h2>条件渲染</h2>
   <p v-if="seel" class="font-bold">可见</p>
   <del v-else>可见</del>
 
