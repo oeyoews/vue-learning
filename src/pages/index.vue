@@ -6,7 +6,10 @@ useHead({
 </script>
 
 <template>
-  <h1 class="text-center">{{ config.title }}</h1>
+  <h1 class="text-center">
+    {{ config.title }}
+    <i-skill-icons-vuejs-light class="inline" />
+  </h1>
   <LinkList />
 </template>
 

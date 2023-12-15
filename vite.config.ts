@@ -5,12 +5,14 @@ import { VueRouterAutoImports } from 'unplugin-vue-router';
 import { ClientSideLayout } from 'vite-plugin-vue-layouts';
 import { unheadVueComposablesImports } from '@unhead/vue';
 
+import IconsResolver from 'unplugin-icons/resolver';
 import Components from 'unplugin-vue-components/vite';
 import Vue from '@vitejs/plugin-vue';
 import path from 'path';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 import VueJsx from '@vitejs/plugin-vue-jsx';
+import Icons from 'unplugin-icons/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -26,7 +28,11 @@ export default defineConfig(({ mode }) => {
         dts: 'src/typed-router.d.ts',
         // importMode: 'sync',
       }), // first
+      Icons({
+        autoInstall: true,
+      }),
       Components({
+        resolvers: [IconsResolver()],
         extensions: ['vue', 'jsx', 'tsx'],
         dts: 'src/components.d.ts',
       }),
