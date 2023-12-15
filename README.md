@@ -22,4 +22,8 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 ## TODO
 
 - [ ] 如何共享状态 保持
-- [ ] ssr???(nuxt???)
+
+## Vscode Extensions
+
+- Goto definition alias
+- iconify intellisense
