@@ -24,6 +24,6 @@ watch(count, (count, onlCount) => {
 
 <route lang="yaml">
 meta:
-  title: '侦听器(watchers)'
+  title: 侦听器(watchers)
   link: 'https://cn.vuejs.org/guide/essentials/watchers.html'
 </route>
