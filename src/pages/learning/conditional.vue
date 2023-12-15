@@ -14,7 +14,6 @@ const toggleSeel = () => {
   <del v-else>可见</del>
 
   <Image :src="img" class="w-96" alt="conditional image" />
-  <Image :src="img" class="w-96" alt="conditional image" />
   <button @click="toggleSeel">toggle</button>
 
   <h3>v-show/v-if</h3>
