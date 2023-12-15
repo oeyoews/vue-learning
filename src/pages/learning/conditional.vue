@@ -1,28 +1,11 @@
 <script setup lang="ts">
 import img from '~/assets/learning/conditional.png';
-import mediumZoom from 'medium-zoom';
 
 const seel = ref(true);
 
 const toggleSeel = () => {
   seel.value = !seel.value;
 };
-
-const getSystemMode = () => {
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    return 'dark';
-  }
-};
-
-const systemMode = getSystemMode();
-
-onMounted(() => {
-  mediumZoom('.zoomable-image', {
-    background:
-      systemMode === 'dark' ? 'rgba(0, 0, 0, 0.6)' : 'rgba(255, 255, 255, 0.6)',
-    scrollOffset: 0,
-  });
-});
 </script>
 
 <template>
@@ -30,7 +13,9 @@ onMounted(() => {
   <p v-if="seel" class="font-bold">可见</p>
   <del v-else>可见</del>
 
-  <img :src="img" class="rounded w-96 zoomable-image" />
+  <Image :src="img" class="w-96" alt="conditional image" />
+  <Image :src="img" class="w-96" alt="conditional image" />
+  <button @click="toggleSeel">toggle</button>
 
   <h3>v-show/v-if</h3>
   <p>
@@ -43,9 +28,6 @@ onMounted(() => {
     有更高的初始渲染开销。因此，如果需要频繁切换，则使用 v-show
     较好；如果在运行时绑定条件很少改变，则 v-if 会更合适。
   </p>
-  <p>v-if, v-else, v-if-else</p>
-
-  <button @click="toggleSeel">toggle</button>
 </template>
 
 <route lang="yaml">
