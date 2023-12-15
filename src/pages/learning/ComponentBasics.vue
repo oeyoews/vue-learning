@@ -28,6 +28,11 @@ const changeFontSize = () => {
   <h3>slot(插槽)</h3>
   <p>写法和react的children一样</p>
 
+  <h3>v-slot</h3>
+  <Md v-slot="slot">
+    {{ slot.text }}
+  </Md>
+
   <h3>dynamic component(动态组件)</h3>
   <button @click="toggleComponent">toggle component</button>
   <component :is="isToggle ? Lorem : Lorem2" />
