@@ -17,6 +17,7 @@
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/composition-api": "^1.7.2",
     "autoprefixer": "^10.4.16",
+    "medium-zoom": "^1.1.0",
     "pinia": "^2.1.7",
     "postcss": "^8.4.32",
     "prettier": "^3.1.1",
