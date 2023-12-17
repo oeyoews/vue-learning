@@ -44,6 +44,7 @@ export default defineConfig(({ mode }) => {
         imports: [
           'vue',
           'pinia',
+          '@vueuse/core',
           VueRouterAutoImports,
           unheadVueComposablesImports,
           {
