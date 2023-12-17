@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Avatar: typeof import('./components/Avatar.tsx')['default']
+    Filter: typeof import('./components/Filter.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     ICarbonAccessibility: typeof import('~icons/carbon/accessibility')['default']
     IIconCarbonLogoGithub: typeof import('~icons/ic/on-carbon-logo-github')['default']

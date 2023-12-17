@@ -30,6 +30,9 @@ useHead({
   </p>
 
   <h2>事件</h2>
+
+  <hr />
+  <Filter />
 </template>
 
 <route lang="yaml">
