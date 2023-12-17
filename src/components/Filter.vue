@@ -28,15 +28,31 @@ const randomUsers = [
 ];
 
 const keyword = ref('');
+const sortType = ref(0);
 const filteredUsers = computed(() => {
-  return randomUsers.filter((user) =>
-    user.username.toLowerCase().includes(keyword.value.toLowerCase())
-  );
+  return randomUsers
+    .filter((user) =>
+      user.username.toLowerCase().includes(keyword.value.toLowerCase())
+    )
+    .sort((a, b): any => {
+      if (sortType.value === 1) {
+        // up
+        return a.age > b.age ? 1 : -1;
+      } else if (sortType.value === -1) {
+        // down
+        return a.age > b.age ? -1 : 1;
+      }
+    });
 });
 </script>
 
 <template>
   <input type="text" v-model="keyword" placeholder="Search" />
+
+  <button @click="sortType = 0">vanilla</button>
+  <button @click="sortType = 1">up</button>
+  <button @click="sortType = -1">down</button>
+
   <ul>
     <li v-for="user in filteredUsers" :key="user.id">
       {{ user.username }}
